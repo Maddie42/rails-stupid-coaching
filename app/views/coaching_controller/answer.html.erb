@@ -1,0 +1,29 @@
+<h1>CoachingController#answer</h1>
+<p>Find me in app/views/coaching_controller/answer.html.erb</p>
+
+<% def coach_answer(ask) %>
+
+  <% if ask.include? "?" %>
+    <% return "Silly question, get dressed and go to work!" %>
+  <% elsif ask.include? "I am going to work right now!"%>
+    <% return "" %>
+  <% else %>
+    <% return " don't care, get dressed and go to work!"%>
+  <% end %>
+<% end %>
+
+<% def coach_answer_enhanced(ask) %>
+
+  <% if ask.upcase.include? "?" %>
+    <% return "I can feel your motivation! Silly question, get dressed and go to work!" %>
+  <% elsif your_message.include? "I am going to work right now!".upcase %>
+    <% return "" %>
+  <% else %>
+    <% return "I can feel your motivation! I don't care, get dressed and go to work!" %>
+  <% end %>
+<% end %>
+
+
+
+<h1>Fuck Rails!</h1>
+<%= link_to 'ask', ask_path %>
